@@ -11,6 +11,9 @@ function [vertices,edges] = Create_SF_NetWork(N,S,m_0,type)
 %需求，S<=m_0。
     
     bar=waitbar(0,'1','name','创建复杂网络');
+    
+    string=sprintf('复杂网络开始创建种子');
+    waitbar(0,bar,string);
     %对于SF与SF1之间的区别
     function [weight] = Create_Weight()
         switch(type)

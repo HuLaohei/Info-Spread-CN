@@ -6,7 +6,8 @@ function [S_need,tao_i] = Calculate_tao_i(x_n,vertices,edges,S,M0,M1,M2,alpha,yi
 %2.其余参数见Analysis.m。
 
     bar=waitbar(0,'1','name','计算局部响应时间');
-    
+    string=sprintf('开始计算局部响应时间');
+    waitbar(0,bar,string);
     %对于每一个度，选取一个点
     unique_S=setdiff(unique(S),0);
     tao_i=zeros(length(unique_S),1);

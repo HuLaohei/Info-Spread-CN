@@ -7,6 +7,8 @@ function [vertices,edges] = Create_ER_NetWork(N,S,p)
 %3.p:连接非邻居节点的概率.
 
     bar=waitbar(0,'1','name','创建复杂网络');
+    string=sprintf('复杂网络开始创建对角矩阵');
+    waitbar(0,bar,string);
     vertices=1:N;
     edges=sparse(N,N);
 

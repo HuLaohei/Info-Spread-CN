@@ -3,8 +3,8 @@ clear;
 close all;
 
 %建立复杂网络(具体网络类型以及参数要求见'Create_NetWork')
-N=600;%复杂网络节点数量
-[vertices,edges,S,params]=Create_NetWork('ER',[N,40,0.5]);
+N=6000;%复杂网络节点数量
+[vertices,edges,S,params]=Create_NetWork('ER',[N,200,0.5]);
 
 %函数的选取(具体函数类型以及参数要求见'Create_Function')
 [M0,M1,M2]=Create_Function('M',[]);

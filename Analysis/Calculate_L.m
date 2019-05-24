@@ -3,6 +3,8 @@ function [L] = Calculate_L(vertices,edges)
 
 %参数解释：略
     bar=waitbar(0,'1','name','计算最短路径');
+    string=sprintf('开始计算最短路径');
+    waitbar(0,bar,string);
     L=zeros(length(vertices));
     for i=1:length(vertices)
         bili=i/length(vertices);

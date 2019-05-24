@@ -6,6 +6,8 @@ function [x_n] = Calculate_x(vertices,edges,M0,M1,M2,tao,epsilon,S)
 %1.x_n：最终稳定的x值。
 
     bar=waitbar(0,'1','name','计算稳定状态');
+    string=sprintf('开始计算稳定状态');
+    waitbar(0,bar,string);
     %用于ode45计算的微分方程
     function [dx] = Calculate_x_stable(t,x)
         dx=zeros(length(vertices),1);

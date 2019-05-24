@@ -6,6 +6,8 @@ function [average_T,T] = Calcualte_T(x_n,vertices,edges,M0,M1,M2,alpha,yita,tao,
 %2.其余参数见Analysis.m。
 
     bar=waitbar(0,'1','name','计算平均响应时间');
+    string=sprintf('开始计算平均响应时间');
+    waitbar(0,bar,string);
     T=zeros(length(vertices));
     for i=1:length(vertices)
         bili=i/length(vertices);
