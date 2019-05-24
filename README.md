@@ -1,4 +1,4 @@
-论文原文见https://www.nature.com/articles/s41567-018-0409-0
+论文原文见https://www.nature.com/articles/s41567-018-0409-0 \n
 寻找不同拓扑方式以及传播方式的共同点
 主要实现了论文中提到的以下方面：
 一.数据建立方面
