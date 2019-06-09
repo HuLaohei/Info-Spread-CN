@@ -1,9 +1,9 @@
-function [vertices,edges] = Create_ER_NetWork(N,S,p)
+function [vertices,edges] = Create_ER_NetWork(N,S_num,p)
 %此函数用于创建Erdos-Renyi网络，我们假设初始时只连接至邻居节点，有p的概率连接非邻居节点
 
 %参数解释：
 %1.N:复杂网络结点的数量
-%2.S:平均每个节点的度.
+%2.S_num:平均每个节点的度.
 %3.p:连接非邻居节点的概率.
 
     bar=waitbar(0,'1','name','创建复杂网络');
@@ -13,15 +13,15 @@ function [vertices,edges] = Create_ER_NetWork(N,S,p)
     edges=sparse(N,N);
 
     %我们在开始处理时便将其作为上三角处理
-    S=abs(S)/2;decimal_S=S-fix(S);
-    S=fix(S);S=(S<1)+S;
+    S_num=abs(S_num)/2;decimal_S=S_num-fix(S_num);
+    S_num=fix(S_num);S_num=(S_num<1)+S_num;
 
     %'decimal_vector' 是为了保证设置的S不被改变
     decimal_vector=(rand(1,length(diag(edges,1)))<decimal_S);
     edges=sparse(edges+diag(decimal_vector,1));
 
     %我们认为1到N是一个循环,所以N+1至2N与1至N等价.
-    for i=2:S+1
+    for i=2:S_num+1
         within_section=diag(ones(1,length(diag(edges,i))),i);
         crossing_section=diag(ones(1,length(diag(edges,N-i))),N-i);
         edges=sparse(edges+within_section+crossing_section);

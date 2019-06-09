@@ -1,4 +1,4 @@
-function [] = Analysis(vertices,edges,S,M0,M1,M2,alpha,yita,tao,epsilon)
+function [] = Analysis(x_n,vertices,edges,S,M0,M1,M2,alpha,yita,tao,epsilon)
 %此函数为所有分析以及制图的调用函数
 %参数说明：
 %1.vertices，edges：分别为点集合以及边集合
@@ -26,7 +26,7 @@ function [] = Analysis(vertices,edges,S,M0,M1,M2,alpha,yita,tao,epsilon)
     
     %计算初次运行稳态
     disp('开始计算稳定状态');
-    x_n=Calculate_x(vertices,edges,M0,M1,M2,tao,epsilon,S);
+    x_n=Calculate_x(x_n,vertices,edges,M0,M1,M2,tao,epsilon);
     disp('完成稳定状态计算');
     
     %计算局部响应时间并计算出与度之间的关系

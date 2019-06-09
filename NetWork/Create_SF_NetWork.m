@@ -1,4 +1,4 @@
-function [vertices,edges] = Create_SF_NetWork(N,S,m_0,type)
+function [vertices,edges] = Create_SF_NetWork(N,S_num,m_0,type)
 %此函数用于创建Scale-free网络及其变形，根据type不同：
 %1.type=0：SF，利用BA算法。
 %2.type=1：SF1，在上面基础上权重设为(0.1,0.9)的均匀分布。
@@ -40,7 +40,7 @@ function [vertices,edges] = Create_SF_NetWork(N,S,m_0,type)
         string=sprintf('复杂网络已创建%.2f%',100*bili);
         waitbar(bili,bar,[string '%']);
         S_i=0;
-        while(S_i<S)
+        while(S_i<S_num)
             %在未连接的节点中选取一个并连接
             adj=[i,find(edges(i,:))];
             non_adj=setdiff(vertices,adj);

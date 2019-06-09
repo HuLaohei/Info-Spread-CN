@@ -1,4 +1,4 @@
-function [M0,M1,M2] = Create_Function(type,parmas)
+function [M0,M1,M2] = Create_Function(type,params)
 %此函数用于创建微分方程。
 %可创建的方程如下：
 %1.R1:regulatory dynamics。
@@ -24,4 +24,3 @@ function [M0,M1,M2] = Create_Function(type,parmas)
             M0=@(x) -x; M1=@(x) 1-x; M2=@(x) x;
     end
 end
-
