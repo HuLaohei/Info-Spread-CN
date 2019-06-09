@@ -13,7 +13,7 @@
 <p>&nbsp&nbsp还实现了聚类程度C，度相关性Q以及度S的计算</p>  
 <h1>二.参数计算方面</h2>  
 <p>&nbsp&nbsp1.计算稳定状态设定的初值:Calculate_x</p>  
-<p>&nbsp&nbsp2.稳定状态计算:Calculate_x</p>  
+<p>&nbsp&nbsp2.稳定状态计算:Calculate_init_x</p>  
 <p>&nbsp&nbsp3.j点至i点的激活时间:Calculate_T_ji</p>  
 <p>&nbsp&nbsp4.平均激活时间:Calculate_T</p>  
 <p>&nbsp&nbsp5.局部激活时间:Calculate_tao_i</p>  
